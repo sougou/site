@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmultigres_com=self.webpackChunkmultigres_com||[]).push([[1903],{1912:e=>{e.exports=JSON.parse('{"blogBasePath":"/site/blog","blogTitle":"Blog"}')}}]);

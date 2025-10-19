@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmultigres_com=self.webpackChunkmultigres_com||[]).push([[7199],{5326:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-blog","id":"default"}')}}]);

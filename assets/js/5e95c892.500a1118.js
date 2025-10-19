@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmultigres_com=self.webpackChunkmultigres_com||[]).push([[9647],{7512:(e,s,r)=>{r.r(s),r.d(s,{default:()=>i});r(758);var u=r(3526),c=r(7767),t=r(335),a=r(389),l=r(7871),n=r(6070);function i(e){return(0,n.jsx)(t.e3,{className:(0,u.A)(c.G.wrapper.docsPages),children:(0,n.jsx)(l.A,{children:(0,a.v)(e.route.routes)})})}}}]);

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-consensus docs-version-current docs-doc-page docs-doc-id-part-07" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.2.1">
+<title data-rh="true">Part 7: Discovery and Propagation | Multigres</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://sougou.github.io/site/img/og-image.png"><meta data-rh="true" name="twitter:image" content="https://sougou.github.io/site/img/og-image.png"><meta data-rh="true" property="og:url" content="https://sougou.github.io/site/consensus/part-07"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-consensus-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-consensus-current"><meta data-rh="true" property="og:title" content="Part 7: Discovery and Propagation | Multigres"><meta data-rh="true" name="description" content="&lt;Author"><meta data-rh="true" property="og:description" content="&lt;Author"><link data-rh="true" rel="icon" href="/site/favicon.ico"><link data-rh="true" rel="canonical" href="https://sougou.github.io/site/consensus/part-07"><link data-rh="true" rel="alternate" href="https://sougou.github.io/site/consensus/part-07" hreflang="en"><link data-rh="true" rel="alternate" href="https://sougou.github.io/site/consensus/part-07" hreflang="x-default"><link rel="alternate" type="application/rss+xml" href="/site/blog/rss.xml" title="Multigres RSS Feed">
+<link rel="alternate" type="application/atom+xml" href="/site/blog/atom.xml" title="Multigres Atom Feed"><link rel="stylesheet" href="/site/assets/css/styles.27c0369b.css">
+<script src="/site/assets/js/runtime~main.96e051e1.js" defer="defer"></script>
+<script src="/site/assets/js/main.deb10ac2.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"dark")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_JdPu" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/site/"><div class="navbar__logo"><img src="/site/img/logo-horizontal.png" alt="Multigres" class="themedComponent_chWP themedComponent--light_Gd6i"><img src="/site/img/logo-horizontal.png" alt="Multigres" class="themedComponent_chWP themedComponent--dark_Zt6b"></div></a></div><div class="navbar__items navbar__items--right"><a class="navbar__item navbar__link" href="/site/docs">Docs</a><a class="navbar__item navbar__link" href="/site/blog">Blog</a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/site/consensus">Consensus Series</a><a href="https://github.com/multigres/multigres" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_TwIN"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="navbarSearchContainer_rV6B"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_ngnh"><div class="docsWrapper_jGAo"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_zDCw" type="button"></button><div class="docRoot_bivv"><aside class="theme-doc-sidebar-container docSidebarContainer__gzq"><div class="sidebarViewport_aJRN"><div class="sidebar_PzPi"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_u206"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/site/consensus/part-00">A Generalization of Consensus Protocols</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus/part-00">Credits</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus">Part 1: Defining the Problem</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus/part-02">Part 2: Building the Foundation</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus/part-03">Part 3: Governing Rules</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus/part-04">Part 4: Fulfilling Requests</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus/part-05">Part 5: Before and After</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus/part-06">Part 6: Revocation and Candidacy</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/site/consensus/part-07">Part 7: Discovery and Propagation</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus/part-08">Part 8: Changing the Rules</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus/part-09">Part 9: Consistent Reads</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus/part-10">Part 10: Addenda</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/site/consensus/part-11">Part 11: Recap</a></li></ul></li></ul></nav></div></div></aside><main class="docMainContainer_cvsP"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_o_o2"><div class="docItemContainer_mJDa"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_fOI_" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/site/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_Z6Ao"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">A Generalization of Consensus Protocols</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Part 7: Discovery and Propagation</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_Loqv theme-doc-toc-mobile tocMobile_Qjix"><button type="button" class="clean-btn tocCollapsibleButton_SjdV">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Part 7: Discovery and Propagation</h1>
+<!-- -->
+<div style="margin-bottom:2rem;padding:1rem"><div style="display:flex;align-items:center;gap:1rem"><img src="https://github.com/sougou.png" alt="Sugu Sougoumarane" style="width:50px;height:50px;border-radius:50%"><div><div style="font-weight:bold">Sugu Sougoumarane</div><div style="font-size:0.9rem;opacity:0.8">Creator of Multigres, Vitess</div></div></div></div>
+<p>Rules covered in this section:</p>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="rules">Rules<a href="#rules" class="hash-link" aria-label="Direct link to Rules" title="Direct link to Rules">​</a></h3>
+<ol>
+<li>Durability: Every decision is a distributed decision.<!-- -->
+<ol>
+<li>A distributed decision must be made durable.</li>
+<li>A decision that has been made durable can be applied.</li>
+</ol>
+</li>
+<li>Consistency: Decisions must be applied sequentially.<!-- -->
+<ol>
+<li>(skipped)</li>
+<li>Every agent must discover decisions that were previously made durable, but not applied, and honor them. Clarifications:<!-- -->
+<ol>
+<li>There are situations where it will be impossible to know if a decision met the durability criteria. If so, the agent must honor such decisions because they might have been applied.</li>
+<li>Decisions that get honored must be made durable and applied as a new decision made by the current agent (rule 1).</li>
+<li>Inference: If an agent discovers multiple conflicting timelines, the newest one must be chosen.</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>In the previous section, we covered how new coordinators ensured that they followed rule 2a, essentially ensuring that only one was able to take action at a given point of time. We discussed revocation and candidacy.</p>
+<p>In this post, we will discuss:</p>
+<ul>
+<li>Discovery of timelines</li>
+<li>Propagation</li>
+<li>Establishment of leadership</li>
+</ul>
+<h1>Discovery</h1>
+<p>The act of revocation has a serendipitous side effect: It also lets you discover all completed requests. The nodes that were recruited were necessary for the leader to complete its requests. By definition, it means that one of those nodes must have all the requests that were completed.</p>
+<p>Beyond the completed requests, some of those nodes may also contain requests that were attempted.</p>
+<p><img decoding="async" loading="lazy" alt="Generalized durability policy" src="/site/assets/images/genpolicy-b5a206ec1d40ea924a3f097782d6d0ed.svg" width="323" height="572" class="img_qM5N"></p>
+<p><img decoding="async" loading="lazy" alt="Figure 1: Discovery" src="/site/assets/images/part07-fig1-aa7df73eada64fa3570fc2be40696e5d.svg" width="591" height="350" class="img_qM5N"></p>
+<p>Let us take the example in Figure 1. The durability rules are the same as the previous examples: N1 requires requests to reach both N2 and N3 for completion. In the above scenario:</p>
+<ul>
+<li>N1 has completed A. This request must not be lost.</li>
+<li>B has met the durability criteria. This request must also not be lost.</li>
+<li>C and D have not met the durability criteria.</li>
+</ul>
+<p>If the coordinator manages to recruit all three nodes, it will know the whole truth: Requests A and B must be completed. C and D can be discarded. This is the hard requirement from rule 2b.</p>
+<p>The follow-up question is: Is there harm in also completing C and D? There is no harm. After all, they were valid requests that the leader was trying to complete. We will need and use this flexibility in other failure scenarios.</p>
+<p>Suppose there is a network partition, and the coordinator is only able to recruit N3, with no visibility into N1 or N2. Based on the log information, all it can infer is that A and B might have been applied. This is where we use the inference 2b(i): We honor A and B.</p>
+<p>If the coordinator recruits N2, the same logic applies. But in this case, all it can infer is that A, B, and C might have been applied. Here, we honor A, B, and C.</p>
+<p>If the coordinator recruits N2 and N3, it knows that C was not complete, and it has the option of discarding it. In this case, we can choose to honor just A and B, or A, B, and C. However, a general rule to honor the most progressed timeline is safe and simpler.</p>
+<p><em>The outcome of what will be honored after a failure is non-deterministic: If N3 were the only discovered node, C would be abandoned. If N2 were discovered, C would be included in the recovery. However, B will not be abandoned because it has already met the durability criteria.</em></p>
+<p>This algorithm would be simple if a coordinator always succeeded in establishing leadership. However, multiple failures can occur during propagation. If that happens, newer coordinators may see conflicting timelines. We will discuss these scenarios after analyzing propagation.</p>
+<h1>Propagation</h1>
+<p>For a leader, the <code>decisions</code> it was fulfilling were <code>requests</code>.</p>
+<p>A coordinator’s intent is not to fulfill requests. The <code>decision</code> it needs to fulfill is to establish a leadership using the <code>timeline</code> it has selected.</p>
+<p>If the rules from the previous post were followed, the coordinator would have already recruited the candidacy nodes into the current term number. The goal now is to propagate this timeline to those nodes. Once this occurs, it can delegate its term to the candidate. This will establish its leadership, allowing the new leader to begin accepting external requests.</p>
+<p>Since a timeline includes multiple requests, the standard action performed by a leader cannot be used for propagation; A leader has the right to apply each request individually. According to Rule 1, the entire timeline must be made durable before it is applied.</p>
+<p>Before discussing implementation options, let&#x27;s briefly review Rule 2b(ii). It states that propagation must be made durable as a new decision. This means that decisions should be versioned and their sequence should be known. We need to do this because we assume these attempts may fail. If they do, we must know the order in which these propagations were attempted. Without this, we cannot apply Rule 2b(iii).</p>
+<p>This gives rise to a few implementation choices:</p>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="the-paxos-way">The Paxos way<a href="#the-paxos-way" class="hash-link" aria-label="Direct link to The Paxos way" title="Direct link to The Paxos way">​</a></h3>
+<p>Paxos is a protocol meant for finalizing a single value. The way to reconcile this with logs that have multiple values is to treat each timeline as a composite value. Our goal will be to finalize a chosen timeline.</p>
+<p>For those that are not familiar with Paxos, we actually need to track three variables:</p>
+<ol>
+<li>The proposal number the node has agreed to participate in</li>
+<li>The current value</li>
+<li>The proposal number that was used to accept the value</li>
+</ol>
+<p>The proposal number for the value is stored in a variable different from the proposal number that was accepted from the <code>prepare</code> request. We will now explain why it should be tracked separately.</p>
+<p>Figure 2 shows an illustration of how this works.</p>
+<p><img decoding="async" loading="lazy" alt="Figure 2: Timeline propagation" src="/site/assets/images/part07-fig2-3be30404746aa3a25f4d2b5b25e60ff7.svg" width="860" height="400" class="img_qM5N"></p>
+<p>As mentioned above, we will treat each timeline as a composite value like T0, T1, and T2, as shown in Figure 2.</p>
+<p>In this scenario, let us start with N6, which contains timeline T1 which has two requests in its log.</p>
+<p>The node has the following variables:</p>
+<ul>
+<li>Node name: N6</li>
+<li>Node’s term: 5</li>
+<li>Value: T1 (two requests)</li>
+<li>Value’s term: 5. This is the new variable we are introducing, which stores the term number when the value was accepted.</li>
+</ul>
+<p>When C6 recruits N6, this will update the node’s term to 6. However, the value T1 and the <code>value’s term</code> 5 stay the same. At this point, if a new coordinator asks about N6, it will see the node’s term as 6 and the value as T1. But that timeline was set under term 5 and is not the correct value for term 6. That’s why we need to add a new variable to track the value’s term.</p>
+<p>When C6 requests the node to change its timeline to T2, then the timeline and the value’s terms are updated. This, in essence, is rule 2b(ii). The decision made by C6 to change N6’s timeline from T0 to T1 is executed as a new decision under term number 6.</p>
+<p><strong>This change must be atomic</strong>: If C6 crashes while still writing T2, then no change should happen. It would not be acceptable for part of T2 to overwrite T1. In this state, it would have destroyed the previous timeline and replaced it with an incomplete portion of itself. This can lead to data loss.</p>
+<p><strong>The change is authoritative</strong>: The previous timeline may conflict with the new one. No matter, the new timeline must completely overwrite the previous one.</p>
+<p>An extension of this rule is that regular leadership requests also have the value’s term associated with them. But they don’t change during the completion of requests because they are all under the same term.</p>
+<p><em>The value’s term must be persisted for the same reasons why the node’s term must be persisted.</em></p>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="the-raft-way">The Raft way<a href="#the-raft-way" class="hash-link" aria-label="Direct link to The Raft way" title="Direct link to The Raft way">​</a></h3>
+<p>Raft has a different approach.</p>
+<p>Raft does not have the term as a separate variable. Instead, each request includes a term number, which is part of the log. When it comes to completing requests, Raft and Paxos are equivalent. One could say that Paxos is more storage-efficient than Raft because storing the single value is functionally equivalent to what Raft achieves by storing the term number for every request.</p>
+<p>But they differ on how the timeline is propagated. Let us take the following animated example:</p>
+<!-- -->
+<div><div class="animated-svg-container" style="display:block;margin:1rem 0;overflow:visible" role="img" aria-label="Figure 3: Raft timeline propagation"></div></div>
+<p>Let us assume that term 7 is trying to propagate N1’s timeline ABCD to N6, which initially has AB in its log.</p>
+<p>In Raft, the log is propagated non-atomically. When N1 has two additional entries, it could propagate to N6 in two steps (steps 1 and 2). Additionally, the term number associated with those log entries remains the old term 5. This appears to violate rule 2b(ii). According to this rule, propagation must use the latest term number.</p>
+<p>However, the rule is valid, and Raft follows it. The reason: Raft has an addendum to how it implements durability. The updated rule is as follows:</p>
+<p><em>For a request to be durable, it must reach quorum. Additionally, the term number of the request must match the current term.</em></p>
+<p>In other words, from a new term’s perspective, events from all previous terms are considered non-durable. They only become durable when a new event using the current term is appended to the logs. This requires the entire timeline to become durable under the new term before it can be applied.</p>
+<p>On Step 3, a new request with term 7 is created and replicated. This is what makes the timeline meet the term number matching requirement for durability. Once the necessary followers have also received the amended timeline, it can be safely applied. This behavior meets the requirements of rule 2b(ii).</p>
+<p>We intentionally left a gap to accommodate a complication that term 6 might have brought in, which term 7 is not unaware of. We will cover this in a later section.</p>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="the-timestamp-way">The timestamp way<a href="#the-timestamp-way" class="hash-link" aria-label="Direct link to The timestamp way" title="Direct link to The timestamp way">  ​</a></h3>
+<p>Sometimes, you might not have control over the data you can add to the log replication. The specific use case is Postgres WAL replication: There is no simple way to add extra metadata, like a term number, to that log.</p>
+<p>However, WAL commit events have timestamps. Assuming that clock skews are within tolerable limits, these timestamps can serve the same purpose as term numbers: they mark the order in which decisions are made.</p>
+<p>This means that algorithms that resolve conflicting timelines will work equally well if we use event timestamps instead of term numbers.</p>
+<p>In part 5 of our series, we discussed an alternate way of using locks and timeouts to enforce the sequencing of coordinators. Combining this timestamp method with the locks and timeouts approach creates a complete system that satisfies all our rules. This combination eliminates the need for term numbers entirely.</p>
+<h1>Discovery revisited</h1>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="selecting-timelines">Selecting Timelines<a href="#selecting-timelines" class="hash-link" aria-label="Direct link to Selecting Timelines" title="Direct link to Selecting Timelines">​</a></h3>
+<p>In a network with intermittent failures, multiple coordinator attempts can fail, and each time, a coordinator may get to see only a subset of the nodes. Over time, a coordinator may see variety of timelines, and has to ensure that it chooses a safe one that does not violate the requirements of durability and consistency.</p>
+<p>The rules for selecting a safe timeline are simple:</p>
+<ul>
+<li>The coordinator must recruit enough nodes to ensure that all possible leaderships are revoked. If this is not possible, then no progress can be made.</li>
+<li>Among the recruited nodes, the timeline with the latest decision (term) is always safe.</li>
+<li>If there are multiple timelines with the same term, then the most progressed timeline is always safe.</li>
+</ul>
+<p>The reasoning is as follows:</p>
+<ul>
+<li>Every previous decision that was made was a safe one for that term. This applies recursively back to the oldest decision.</li>
+<li>The last discovered decision might have reached durability. It is even possible that some nodes have started applying that decision. This possibility makes all decisions previous to the last one unsafe.</li>
+</ul>
+<p>What if we encounter a timeline that is more progressed than a newer decision? This only means that the timeline did not reach durability. Otherwise, the newer decision would have honored it. But now, we have to discard that progressed timeline because there is a chance that the newer decision has been finalized already.</p>
+<p>What if there exists a decision that is newer, but we don’t see it among the recruited nodes? If so, the decision did not reach durability, and need not be honored. We can choose the most appropriate timeline among those we discovered, and make sure to propagate it as the newest decision.</p>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="failure-scenarios">Failure scenarios<a href="#failure-scenarios" class="hash-link" aria-label="Direct link to Failure scenarios" title="Direct link to Failure scenarios">​</a></h3>
+<p>We will now cover the following failure scenarios:</p>
+<ol>
+<li>A coordinator may not be able to reach enough nodes to make any progress.</li>
+<li>A coordinator may attempt to propagate a timeline and fail before making it durable.</li>
+<li>A coordinator may attempt a timeline that differs from the previous one, try to propagate it, and fail.</li>
+<li>A coordinator may succeed at propagating a timeline, but fail before promoting the leader.</li>
+<li>A final coordinator may see all these attempts and must make a decision that does not compromise safety.</li>
+</ol>
+<p>In the above sequence of failures, the most critical requirement is that attempt 5 must successfully discover attempt 4 and honor it.</p>
+<p>We will analyze these scenarios assuming that we are using the Raft method of propagation. However, the strategy will work for all methods.</p>
+<div><div class="animated-svg-container" style="display:block;margin:1rem 0;overflow:visible" role="img" aria-label="Figure 4: Initial state"></div></div>
+<p>Let us restart with the example shown in the Raft section:</p>
+<ul>
+<li>N1 is the primary at term 5. It has received requests ABCD.</li>
+<li>N2 is a quorum requirement for N1. It has received requests ABC.</li>
+<li>N3 is a quorum requirement for N1. It has received requests AB.</li>
+<li>N5 is not a quorum requirement of N1 and has received A.</li>
+<li>N4 and N6 are not quorum requirements of N1 and have both received AB.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="scenario-1">Scenario 1<a href="#scenario-1" class="hash-link" aria-label="Direct link to Scenario 1" title="Direct link to Scenario 1">​</a></h3>
+<p><em>Scenario 1 is a no op. The coordinator cannot make any progress.</em></p>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="scenario-2">Scenario 2<a href="#scenario-2" class="hash-link" aria-label="Direct link to Scenario 2" title="Direct link to Scenario 2">​</a></h3>
+<p><em>A coordinator may attempt to propagate a timeline and fail before making it durable.</em></p>
+<!-- -->
+<div><div class="animated-svg-container" style="display:block;margin:1rem 0;overflow:visible" role="img" aria-label="Figure 5: Scenario 2"></div></div>
+<p>C6 recruits N3, N4 and N5:</p>
+<ul>
+<li>N3 &amp; N4 for revocation</li>
+<li>N4 &amp; N5 for candidacy of N4</li>
+</ul>
+<p>C6 crashes after propagating N3 to N5.</p>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="scenario-3">Scenario 3<a href="#scenario-3" class="hash-link" aria-label="Direct link to Scenario 3" title="Direct link to Scenario 3">​</a></h3>
+<p><em>A coordinator may attempt a timeline that is different from the previous one, try to propagate it, and fail.</em></p>
+<!-- -->
+<div><div class="animated-svg-container" style="display:block;margin:1rem 0;overflow:visible" role="img" aria-label="Figure 6: Scenario 3"></div></div>
+<p>C7 recruits N1, N4 and N6:</p>
+<ul>
+<li>N1 &amp; N4 for revocation</li>
+<li>N4 &amp; N6 for candidacy of N4</li>
+</ul>
+<p>In this scenario, C7 did not discover any of C6’s activity. Based on what it discovered, it decides to propagate N1 to N6.</p>
+<p>C7 crashes at this point.</p>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="scenario-4">Scenario 4<a href="#scenario-4" class="hash-link" aria-label="Direct link to Scenario 4" title="Direct link to Scenario 4">​</a></h3>
+<p><em>A coordinator may succeed at propagating a timeline, but fail before promoting the leader.</em></p>
+<!-- -->
+<div><div class="animated-svg-container" style="display:block;margin:1rem 0;overflow:visible" role="img" aria-label="Figure 7: Scenario 4"></div></div>
+<p>Let us now assume that Coordinator 8 (C8) attempts another leadership change. Let us also assume that it recruits the same nodes that C6 recruited. It will discover the following terms in the timeline:</p>
+<ul>
+<li>N3: 556</li>
+<li>N5: 556</li>
+<li>N4: 55</li>
+</ul>
+<p>From this, C8 infers that C6 tried to propagate timeline AB (55), which makes it a legitimate decision. It propagates <code>6:ok</code> to N4. Following this, it appends <code>8:ok</code> to N5, and propagates it to N3 and N4.</p>
+<p>This action makes the timeline durable. C8 can delegate leadership to N4, which can then apply this timeline and request that N5 and N3 apply it as well.</p>
+<p>But let us assume that C8 crashes at this point.</p>
+<h3 class="anchor anchorWithStickyNavbar_B8JT" id="scenario-5">Scenario 5<a href="#scenario-5" class="hash-link" aria-label="Direct link to Scenario 5" title="Direct link to Scenario 5">​</a></h3>
+<p><em>A final coordinator may see all these attempts and must make a decision that does not compromise safety.</em></p>
+<!-- -->
+<div><div class="animated-svg-container" style="display:block;margin:1rem 0;overflow:visible" role="img" aria-label="Figure 8: Scenario 5"></div></div>
+<p>After scenario 4, the cluster’s state is as shown in the animation above, which shows three distinct timelines.</p>
+<p>In this particular scenario, the coordinator C9 sees all the nodes. It can see that N6 has a more progressed timeline. However, its term is lower than the highest term so far, which is 8.</p>
+<p>It could make a &quot;smart&quot; inference and choose N6&#x27;s timeline. However, the most safe decision would be to choose the timeline with the highest term. This is because choosing the highest term can never be wrong.</p>
+<p>The animation shows the outcome of C9 choosing the timeline of N4 that is on term 8. You will also notice that the propagation overwrites any conflicting timelines by truncating the logs of the targets as needed.</p>
+<p>Let us repeat the reasoning from above using this specific example:</p>
+<ul>
+<li>When C6 made its decision, that decision was based on its visibility. Even though it did not discover the most progressed timeline, its decision was valid because it satisfied the requirements of revocation and candidacy, which transitively satisfies the durability requirements.</li>
+<li>C7 also made a decision, but it did not discover the actions of C6. That means that C6 failed at reaching quorum. C7 had the authority to choose the most progressed timeline among the nodes it recruited, which it propagated to N6.</li>
+<li>C8 discovered artifacts of C6, but not of C7. That only means that C7 also failed at reaching quorum. However, C8 does not know that there was even a C7. From its point of view, it sees the work by C6. For safety, it has to assume that C6 might have reached quorum. So, it must honor every action taken by term 6. This time, C8 succeeds at reaching quorum.</li>
+<li>We finally come to C9, which may discover any combination of the above nodes. However, every combination is guaranteed to include the work done by C8.</li>
+</ul>
+<p>In other words, we expect each term to make a safe decision. This remains true even if the decision conflicts with a previous term’s decision. For a new term, the only safe option is to honor the actions of the most recent term among those discovered.</p>
+<p>This, in essence, is rule 2b(iii).</p>
+<p><img decoding="async" loading="lazy" alt="Figure 6: Timeline Priority" src="/site/assets/images/part07-fig6-0b879efe4686e4580b6202c8e1fdac3b.svg" width="258" height="330" class="img_qM5N"></p>
+<p>The timeline selection priority is as shown in Figure 6. If timeline 5568 was not discovered, 55557 would be chosen, and so on.</p>
+<p>If N4 had applied its timeline before C9 intervened, the system would stay consistent, and the end result would remain the same. The only difference is that the applied indexes would be at different points.</p>
+<p>As mentioned earlier, the action that supersedes these timelines must be either non-destructive or atomic. In other words, events A and B should not be deleted before accepting the new timeline. Instead, anything following A and B should be truncated, and any remaining events from the source should be appended after the truncation.</p>
+<p>At this point, C9 can delegate its term to N4, allowing it to accept new requests.</p>
+<h1>Intermission</h1>
+<p>This completes the expected parts of consensus systems that are traditionally required to prove correctness. However, we will discuss a few more points in upcoming blog posts. These are necessary for a consensus system to work effectively.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/multigres/multigres/tree/main/site/consensus/part-07.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_jJ2a" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_To81"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/site/consensus/part-06"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Part 6: Revocation and Candidacy</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/site/consensus/part-08"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Part 8: Changing the Rules</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_d8qR thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#rules" class="table-of-contents__link toc-highlight">Rules</a></li><li><a href="#the-paxos-way" class="table-of-contents__link toc-highlight">The Paxos way</a></li><li><a href="#the-raft-way" class="table-of-contents__link toc-highlight">The Raft way</a></li><li><a href="#the-timestamp-way" class="table-of-contents__link toc-highlight">The timestamp way</a></li><li><a href="#selecting-timelines" class="table-of-contents__link toc-highlight">Selecting Timelines</a></li><li><a href="#failure-scenarios" class="table-of-contents__link toc-highlight">Failure scenarios</a></li><li><a href="#scenario-1" class="table-of-contents__link toc-highlight">Scenario 1</a></li><li><a href="#scenario-2" class="table-of-contents__link toc-highlight">Scenario 2</a></li><li><a href="#scenario-3" class="table-of-contents__link toc-highlight">Scenario 3</a></li><li><a href="#scenario-4" class="table-of-contents__link toc-highlight">Scenario 4</a></li><li><a href="#scenario-5" class="table-of-contents__link toc-highlight">Scenario 5</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Site</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/site/docs">Docs</a></li><li class="footer__item"><a class="footer__link-item" href="/site/blog">Blog</a></li><li class="footer__item"><a class="footer__link-item" href="/site/consensus">Consensus Series</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/multigres/multigres" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_TwIN"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/multigres" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_TwIN"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Supabase Inc. Licensed under the Apache License, Version 2.0.</div></div></div></footer></div>
+</body>
+</html>
